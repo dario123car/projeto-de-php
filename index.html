@@ -1,0 +1,150 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tech Experience 2026</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+
+<header class="site-header">
+    <div class="container header-content">
+        <a class="brand" href="index.html">
+            Tech<span>Experience</span>
+        </a>
+        <span class="event-year">EVENTO ACADÊMICO • 2026</span>
+    </div>
+</header>
+
+<main class="container main-content">
+
+    <section class="intro">
+        <p class="eyebrow">TECNOLOGIA • CONHECIMENTO • INOVAÇÃO</p>
+        <h1>Faça sua inscrição</h1>
+        <p>Participe do Tech Experience 2026 e escolha suas oficinas.</p>
+    </section>
+
+    <section class="form-card">
+        <div class="card-heading">
+            <div>
+                <p class="eyebrow">FORMULÁRIO DE PARTICIPAÇÃO</p>
+                <h2>Seus dados</h2>
+            </div>
+            <span class="required-note">* Campos obrigatórios</span>
+        </div>
+
+        <form id="form-inscricao" action="processar.php" method="post">
+
+            <div class="form-grid">
+
+                <div class="field full-width">
+                    <label for="nome">Nome completo *</label>
+                    <input type="text" id="nome" name="nome"
+                           required minlength="3"
+                           placeholder="Digite seu nome completo">
+                </div>
+
+                <div class="field full-width">
+                    <label for="email">E-mail *</label>
+                    <input type="email" id="email" name="email"
+                           required placeholder="exemplo@email.com">
+                </div>
+
+                <div class="field">
+                    <label for="experiencia">Nível de experiência *</label>
+                    <select id="experiencia" name="experiencia" required>
+                        <option value="">Selecione uma opção</option>
+                        <option value="iniciante">Iniciante</option>
+                        <option value="intermediario">Intermediário</option>
+                        <option value="avancado">Avançado</option>
+                    </select>
+                </div>
+
+                <fieldset class="field">
+                    <legend>Turno de preferência *</legend>
+
+                    <div class="choice-group">
+                        <label class="choice">
+                            <input type="radio" name="turno"
+                                   value="manha" required>
+                            Manhã
+                        </label>
+
+                        <label class="choice">
+                            <input type="radio" name="turno"
+                                   value="noite">
+                            Noite
+                        </label>
+                    </div>
+                </fieldset>
+
+                <fieldset class="field full-width">
+                    <legend>Oficinas de interesse *</legend>
+
+                    <p class="field-help">
+                        Selecione pelo menos uma oficina.
+                    </p>
+
+                    <div class="choice-group workshop-list">
+                        <label class="choice">
+                            <input type="checkbox" name="oficinas[]"
+                                   value="html_css">
+                            HTML e CSS
+                        </label>
+
+                        <label class="choice">
+                            <input type="checkbox" name="oficinas[]"
+                                   value="js_dom">
+                            JavaScript e DOM
+                        </label>
+
+                        <label class="choice">
+                            <input type="checkbox" name="oficinas[]"
+                                   value="php_backend">
+                            PHP e Backend
+                        </label>
+                    </div>
+
+                    <p id="oficinas-error" class="error-message"></p>
+                </fieldset>
+
+                <div class="field full-width">
+                    <label for="mensagem">
+                        Mensagem / Motivação
+                    </label>
+
+                    <textarea id="mensagem" name="mensagem"
+                              maxlength="200" rows="4"
+                              placeholder="Conte por que deseja participar"></textarea>
+
+                    <div id="contador" class="character-count">
+                        Restam 200 caracteres
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="submit-button" type="submit">
+                Enviar inscrição →
+            </button>
+
+            <p class="privacy-note">
+                Seus dados serão utilizados somente para esta inscrição.
+            </p>
+
+        </form>
+    </section>
+
+</main>
+
+<footer class="site-footer">
+    <div class="container">
+        © 2026 Tech Experience • Desenvolvido para fins acadêmicos.
+    </div>
+</footer>
+
+</body>
+</html>
